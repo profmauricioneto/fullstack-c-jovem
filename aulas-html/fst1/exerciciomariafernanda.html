@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Cartas de Pokémon</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        width: 150px;
+        margin: 20px;
+      }
+
+      h3 {
+        margin: 1rem;
+        text-align: center;
+      }
+
+      #cardpokemon {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+      }
+
+      .card {
+        border: 1px solid #000;
+        width: 200px;
+        margin: 5px;
+        padding: 5px;
+        text-align: center;
+      }
+
+      .button {
+        text-decoration: none;
+        border: 1px solid #e7e7e7;
+        padding: 5px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h3>Seja bem-vindo(a) ao E-commerce de Cartas de Pokémon</h3>
+    </header>
+
+    <main>
+      <section id="cardpokemon">
+        <div class="card">
+          <h4>Pikachu</h4>
+          <img
+            src="https://m.media-amazon.com/images/I/51mIvlKkApL._AC_UF894,1000_QL80_.jpg"
+            alt="Pikachu"
+          />
+          <p class="descricao">
+            Pikachu é um Pokémon da família de Píkachu. É um dos mais rápidos
+            Pokémon do mundo.
+          </p>
+          <p class="valor">R$ 150,00</p>
+          <a href="#" class="button">Comprar</a>
+        </div>
+        <div class="card">
+          <h4>Squirtle</h4>
+          <img
+            src="https://img.mypcards.com/img/2/1127/pokemon_unb_033_214/pokemon_unb_033_214_en.jpg"
+            alt="Squirtle"
+          />
+          <p class="descricao">
+            Squirtle é um Pokémon do tipo Água da primeira geração, com
+            aparência de uma pequena tartaruga azul com um casco marrom.
+          </p>
+          <p class="valor">R$ 100,00</p>
+          <a href="#" class="button">Comprar</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
