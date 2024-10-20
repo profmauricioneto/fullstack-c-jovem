@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 03 - E-commerce de Produtos</title>
+  </head>
+  <body>
+    <header>
+      <h2>Bem-vindo ao E-commerce do Mauricio</h2>
+      <p>Os produtos aqui podem ser filtrados por diversas categorias.</p>
+    </header>
+    <main>
+      <fieldset>
+        <legend>
+          <strong>Filtros</strong>
+        </legend>
+
+        <form action="" method="GET">
+          <div class="container-form">
+            <label for="categoria">Categoria:</label>
+            <select name="categoria" id="categoria">
+              <option value="">Todos</option>
+              <option value="eletronicos">Eletrônicos</option>
+              <option value="livros">Livros</option>
+              <option value="roupas">Roupas</option>
+              <option value="alimentos">Alimentos</option>
+            </select>
+          </div>
+
+          <div class="container-form">
+            <label for="marca">Marca:</label>
+            <select name="marca" id="marca">
+              <option value="">Todos</option>
+              <option value="samsung">Samsung</option>
+              <option value="apple">Apple</option>
+              <option value="lg">LG</option>
+              <option value="motorola">Motorola</option>
+            </select>
+          </div>
+          <div class="container-form">
+            <label for="preco-minimo">Preço Mínimo:</label>
+            <input type="number" id="preco-minimo" name="preco-minimo" />
+          </div>
+          <div class="container-form">
+            <label for="preco-maximo">Preço Máximo:</label>
+            <input type="number" id="preco-maximo" name="preco-maximo" />
+          </div>
+          <button type="submit">Filtrar</button>
+        </form>
+      </fieldset>
+    </main>
+  </body>
+</html>
