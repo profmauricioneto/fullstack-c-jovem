@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+</head>
+
+<body>
+    <header>
+        <h2>Exercício de Formulários!</h2>
+    </header>
+
+    <form action="resultado.html" method="POST">
+        <fieldset>
+            <legend>
+                <strong>Dados do Usuário</strong>
+            </legend>
+
+            <div class="form-container">
+                <input type="radio" id="sr" name="gender" value="senhor" />
+                <label for="sr">Sr.</label>
+
+                <input type="radio" id="srta" name="gender" value="senhorita" />
+                <label for="srta">Srta.</label>
+            </div>
+            <div class="form-container">
+                <label for="name-user">
+                    Nome: <input type="text" id="name-user" name="name-user" placeholder="digite seu nome..."
+                        required />
+                </label>
+            </div>
+
+            <div class="form-container">
+                <label for="surname-user">
+                    Sobrenome: <input type="text" id="surname-user" name="surname-user"
+                        placeholder="digite seu sobrenome..." required />
+                </label>
+            </div>
+
+            <div class="form-container">
+                <label for="pass-user">
+                    Senha: <input type="password" id="pass-user" name="pass-user" placeholder="digite sua senha..."
+                        required />
+                </label>
+            </div>
+
+            <div class="form-container">
+                <select name="genero" id="genero">
+                    <option value="nenhum"></option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+            </div>
+
+            <div class="form-container">
+                <fieldset>
+                    <legend>
+                        <strong>
+                            Termos e Condições
+                        </strong>
+                    </legend>
+                    <input type="checkbox" value="aceito" required /> <a href="">Aceito os Termos do Site.</a> 
+                </fieldset>
+            </div>
+
+            <div class="form-container">
+                <input type="submit">
+            </div>
+    </form>
+    </fieldset>
+</body>
+
+</html>
