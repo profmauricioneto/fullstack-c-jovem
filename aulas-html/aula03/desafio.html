@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="UTF-8" />
+    <title>Card de Produto</title>
+</head>
+
+<body>
+    <header>
+        <h1>Loja de Cartas Pokémon</h1>
+    </header>
+    <main>
+
+
+        <div class="card-pokemon"
+            style="border: 1px solid #ccc; width: 200px; margin: 5px; padding: 10px; text-align: center;">
+            <img class="card-image" src="../assets/pikachu.png" alt="card pokemon" style="width: 100%;" />
+            <h2 id="card-name">Pikachu</h2>
+            <p class="card-price">R$ 500,00</p>
+            <p class="card-description">Carta rara do Pikachu. Edição original.</p>
+        </div>
+
+        <div class="card-pokemon"
+            style="border: 1px solid #ccc; width: 200px; margin: 5px; padding: 10px; text-align: center;">
+            <img class="card-image" src="../assets/squirtle.png" alt="card pokemon" style="width: 100%;" />
+            <h2 id="card-name">Squirtle</h2>
+            <p class="card-price">R$ 600,00</p>
+            <p class="card-description">Carta rara do Squirtle. Edição original.</p>
+        </div>
+
+        <form action="" method="get">
+            <fieldset>
+                <legend>
+                    <strong>
+                        Adicionar Nova Carta
+                    </strong>
+                </legend>
+                <div style="padding: 5px;">
+                    <label for="card-img-input">Imagem: </label>
+                    <input type="file" id="card-img-input" name="card-img-input" required>
+                </div>
+
+                <div style="padding: 5px;">
+                    <label for="card-name-input">Nome da Carta: </label>
+                    <input type="text" id="card-name-input" name="card-name-input" required>
+                </div>
+
+                <div style="padding: 5px;">
+                    <label for="card-price-input">Preço da Carta: </label>
+                    <input type="number" id="card-price-input" name="card-price-input" required>
+                </div>
+
+                <div style="padding: 10px;">
+                    <label for="card-description-input">Descrição da Carta: </label>
+                    <textarea id="card-description-input" name="card-description-input" required></textarea>
+                </div>
+
+                <div style="padding: 5px;">
+                    <button type="submit">Adicionar</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>
