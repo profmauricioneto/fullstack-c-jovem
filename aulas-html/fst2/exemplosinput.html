@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Formulario</title>
+</head>
+
+<body>
+    <form action="resultado.html" method="post">
+        <fieldset>
+            <legend>
+                <strong>Dados Pessoais</strong>
+            </legend>
+
+            <div class="container-input">
+                <input type="radio" id="sr" name="gender" value="masculino" />
+                <label for="sr">Sr.</label>
+
+                <input type="radio" id="srta" name="gender" value="feminino" />
+                <label for="srta">Srta.</label>
+
+            </div>
+
+            <div class="container-input">
+                <label for="name-user">
+                    Primeiro nome:
+                    <input type="text" id="name-user" name="name-user" placeholder="digite seu nome..." required />
+                </label>
+            </div>
+
+            <div class="container-input">
+                <label for="surname-user">
+                    Sobrenome:
+                    <input type="text" id="surname-user" name="surname-user" placeholder="digite seu sobrenome..."
+                        required />
+                </label>
+            </div>
+
+            <div class="container-input">
+                <label for="etnia">Etnia</label>
+                <select name="etnia" id="etnia">
+                    <option value="nao-identificado"></option>
+                    <option value="branco">Branco</option>
+                    <option value="preto">Preto</option>
+                    <option value="pardo">Pardo</option>
+                </select>
+            </div>
+
+            <div class="container-input">
+                <label for="age-user">Idade:</label>
+                <input type="number" max="120" min="18" id="age-user" name="age-user" required />
+            </div>
+
+            <div class="container-input">
+                <label for="password-user">Senha</label>
+                <input type="password" id="password-user" name="password-user" maxlength="8" required>
+            </div>
+
+            <fieldset>
+                <legend>
+                    <strong>Termos e Condições</strong>
+                </legend>
+                <input type="checkbox" id="termos" required>
+                <label for="termos">Aceito os termos e condições do site.</label>
+            </fieldset>
+
+            <div class="btn-input">
+                <input type="submit" />
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

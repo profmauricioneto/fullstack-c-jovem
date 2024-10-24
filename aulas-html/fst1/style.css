@@ -1,0 +1,31 @@
+
+#main-header {
+    color: white;
+    background-color: black;
+    text-align: center;
+    border: 2px solid blue;
+}
+
+.content {
+    color: black;
+    background-color: white;
+    border: 2px dashed red;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    /* text-align: center; */
+}
+
+span {
+    font-weight: bold;
+}
+
+header {
+    /* shorthand properties  */
+    /* border: 5px solid blue; */
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: blue; */
+}

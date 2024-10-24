@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+.card-pokemon {
+    border: 1px solid #ccc; 
+    width: 200px; 
+    margin: 10px; 
+    padding: 20px; text-align: center;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-name {
+    font-weight: bolder;
+}
+
+.card-name, .card-description {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.btn-buy {
+    font-size: 18px;
+    background-color: rgb(36, 219, 225);
+    border-radius: 5px;
+}
+
+.btn-buy:hover {
+    background-color: rgb(53, 118, 120);
+}
