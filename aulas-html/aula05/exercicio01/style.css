@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header-page {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#header-page h1 {
+    font-size: 24px;
+}
+
+.card-pokemon {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: #ccc 0px 0px 10px;
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+}
+
+#card-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-name, .card-description {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.card-type {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-buy {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-buy:hover {
+    background-color: #444;
+}
+
+.btn-like {
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+  
+  .btn-like:hover {
+    background-color: #555;
+  }
+  
+.btn-like:active, .btn-buy:active {
+    background-color: #4CAF50;
+}

@@ -1,0 +1,35 @@
+/* * {
+    margin: 0;
+} */
+
+h2 {
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+span {
+    font-weight: lighter;
+}
+
+#header-page {
+    background-color: black;
+    color: white;
+}
+
+.content-section {
+    border: 2px dashed red;
+    text-align: center;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+}
+
+section {
+    /* border: 3px solid blue; */
+    /* border-width: 1px;
+    border-color: blue;
+    border-style: solid; */
+
+}

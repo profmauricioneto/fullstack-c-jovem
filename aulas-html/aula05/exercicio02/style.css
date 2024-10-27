@@ -17,20 +17,21 @@ body {
 
 .product-card {
   border: 2px solid #ccc;
-  border-radius: 5px;
-  width: 200px;
-  padding: 20px;
+  border-radius: 0.315em;
+  width: 20%;
+  padding: 1.25em;
   text-align: center;
   background-color: #fff;
 }
 
 img {
   width: 100%;
-  border-radius: 5px;
+  height: auto;
+  border-radius: 0.315em;
 }
 
 h2, p {
-  margin: 10px 0;
+  margin: 0.625em 0;
 }
 
 
@@ -38,8 +39,8 @@ button {
   background-color: #333;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 0.625em 1.25em;
+  border-radius: 0.315em;
   cursor: pointer;
 }
 
