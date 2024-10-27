@@ -1,0 +1,52 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Seção de destaque */
+.destaque {
+    overflow: hidden;
+}
+
+.destaque .coluna {
+    float: left;
+    width: 49%; 
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.destaque .coluna img {
+    width: 100%;
+    height: auto;
+}
+
+.produtos-mais-vendidos {
+    overflow: hidden;
+    text-align: center;
+}
+
+.produtos-mais-vendidos .coluna {
+    float: left;
+    width: 32.33%; 
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.btn-comprar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.preco {
+    font-size: 1.2em;
+    color: #333;
+}
