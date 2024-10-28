@@ -25,9 +25,9 @@
     box-shadow: #ccc 0px 0px 10px;
 }
 
-.car-image {
+.card-image {
     width: 100%;
-    height: 200px;
+    height: 100%;
 }
 
 #card-name {
@@ -78,4 +78,8 @@
   
 .btn-like:active, .btn-buy:active {
     background-color: #4CAF50;
+}
+
+.isLike {
+    background-color: rgba(59, 139, 231, 0.956);
 }

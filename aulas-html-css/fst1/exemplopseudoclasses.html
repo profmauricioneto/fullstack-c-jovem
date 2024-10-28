@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title>
+
+    <style>
+        .content {
+            width: 100px;
+            height: 100px;
+            /* padding: 10px 20px 30px 60px; */
+            padding: 10px 20px;
+            background-color: blue;
+            text-align: center;
+            color: white;
+        }
+
+        .content:hover {
+            background-color: red;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        .text-content > p {
+            font-size: 16px;
+            color: blue;
+        }
+
+        .text-content p::first-letter {
+            color: red;
+            font-size: 26px;
+            font-weight: bolder;
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <section class="content">
+            <p>quadrado 1</p>
+        </section>
+
+        <section class="content">
+            <p>quadrado 2</p>
+        </section>
+
+        <section class="content">
+            <p>quadrado 3</p>
+        </section>
+
+        <section class="text-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, vero eveniet cum doloribus sed suscipit sint fugit impedit! Tempore cupiditate ducimus accusamus facere officiis sapiente quidem ad culpa in soluta?</p>
+            
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia velit modi mollitia quas cum nulla excepturi exercitationem animi hic perspiciatis illo ullam aperiam corporis reiciendis, ducimus tempore eveniet veritatis quam?</p>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta earum accusantium eum officiis in fugiat tempore facere libero ducimus quod assumenda harum, architecto magnam? Ipsam perferendis fugiat dignissimos minima soluta.</p>
+        </section>
+
+        <section>
+            <a href="mailto:mauricio.moreira@unichristus.edu.br">Enviar email</a>
+        </section>
+
+    </div>
+</body>
+
+</html>
