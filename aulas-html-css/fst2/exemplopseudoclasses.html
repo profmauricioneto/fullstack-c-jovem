@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Pseudo-Classes</title>
+    <style>
+        .content {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+
+        .content:hover {
+            background-color: red;
+        }
+
+        #email a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:link {
+            color: blue;
+        }
+
+        /* .text-content > p::first-letter {
+            color: red;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder;
+        } */
+
+        /* .text-content p::first-line {
+            text-transform: uppercase;
+        } */
+
+        .text-content > p {
+            background-color: aqua;
+            font-size: 1em;
+        }
+
+        div p {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section class="content">
+            <h3>Conteúdo 1</h3>
+        </section>
+
+        <section class="content">
+            <h3>Conteúdo 2</h3>
+        </section>
+
+        <section class="content">
+            <h3>Conteúdo 3</h3>
+        </section>
+
+        <section id="email">
+            <a href="mailto:mauricio.moreira@unichristus.edu.br">envie o email para contato</a>
+        </section>
+    </div>
+
+    <div>
+        <section class="text-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, dolorem eligendi? Tenetur reiciendis, recusandae obcaecati porro praesentium perferendis repellat provident qui quisquam voluptate deleniti, nemo voluptatem in corporis eos est.</p>
+            <div>
+                <p>testando o teste testador!</p>
+            </div>
+        </section>
+
+        <section class="text-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, dolorem eligendi? Tenetur reiciendis, recusandae obcaecati porro praesentium perferendis repellat provident qui quisquam voluptate deleniti, nemo voluptatem in corporis eos est.</p>
+        </section>
+
+        <section class="text-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, dolorem eligendi? Tenetur reiciendis, recusandae obcaecati porro praesentium perferendis repellat provident qui quisquam voluptate deleniti, nemo voluptatem in corporis eos est.</p>
+        </section>
+    </div>
+</body>
+</html>
