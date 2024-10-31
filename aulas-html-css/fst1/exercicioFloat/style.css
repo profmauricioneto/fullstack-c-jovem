@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    height: 20%;
+    text-align: center;
+}
+
+.coluna:hover {
+    border: 1px solid red;
+}
+
+.destaque > h2 {
+    text-align: center;
+}
+
+.mais-vendidos > h2 {
+    text-align: center;
+}
+
+.destaque .coluna {
+    float: left;
+    width: 49%;
+    padding: 15px;
+    text-align: center;
+}
+
+.destaque .coluna img, .mais-vendidos .coluna img {
+    width: 100%;
+    height: auto;
+}
+
+
+.mais-vendidos .coluna {
+    float: left;
+    width: 32.33%;
+    padding: 15px;
+    text-align: center;
+}
+
+.btn-comprar {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0.315em;
+    font-size: 1.1em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.preco {
+    font-size: 1.1em;
+    color: #333;
+}
+
