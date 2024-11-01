@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header {
+    height: 60px;
+    background-color: #444;
+    color: #fff;
+}
+
+header h2 {
+    position: relative;
+    top: 15px;
+}
+
+.destaque .coluna {
+    float: left;
+    width: 48%;
+    padding: 10px;
+}
+
+.destaque .coluna img {
+    width: 100%;
+    height: auto;
+}
+
+.mais-vendidos .coluna {
+    float: left;
+    width: 32.33%;
+    padding: 10px;
+}
+
+.btn-comprar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 0.315em;
+    margin-top: 10px;
+}
+
+.preco {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.coluna:hover {
+    border: 1px solid red;
+    border-radius: 0.315em;
+}
+
+.btn-comprar:hover {
+    background-color: #444;
+}
