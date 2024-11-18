@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #444;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+        }
+
+
+        .text-content {
+            height: 100vh;
+            background-color: cadetblue;
+        }
+
+        #information {
+            height: 50vh;
+            background-color: brown;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Test</h1>
+        <nav>
+            <ul> 
+                <li><a href="#information">Home</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Habilidades</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="text-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur totam pariatur beatae saepe cum, blanditiis quisquam aperiam quaerat magnam adipisci quod quis dicta voluptate reiciendis omnis corrupti ea in distinctio.</p>
     </div>
+
+    <div id="information"></div>
 </body>
 </html>
