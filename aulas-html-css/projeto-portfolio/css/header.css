@@ -1,0 +1,51 @@
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 30px 0;
+}
+
+nav ul li {
+    padding: 0 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #566;
+}
+
+nav ul li a:hover {
+    color: #213D93;
+}
+
+#destaque {
+    background-color: #213D93;
+    height: 150px;
+    color: #fff;
+    padding-left: 15%;
+}
+
+#destaque h1 {
+    font-weight: lighter;
+    padding: 20px 0;
+}
+
+#linha {
+    width: 70px;
+    border: 2px solid orange;
+}
+
+#frase {
+    height: 150px;
+    text-align: center;
+}
+
+#frase p {
+    font-size: 24px;
+    padding: 40px;
+}
+
+#frase p span {
+    font-weight: bolder;
+}

@@ -1,0 +1,46 @@
+@import url("header.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.main-content {
+    background-color: #F6f6f6;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.image img {
+    transform: scale(0.7);
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text-content {
+    width: 70%;
+}
+
+.text-content h2 {
+    padding: 20px 0;
+}
+
+.text-content #profissao {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.text-content #descricao {
+    text-justify: auto;
+}
