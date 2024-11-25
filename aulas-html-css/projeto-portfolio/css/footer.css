@@ -1,0 +1,22 @@
+footer {
+    background-color: #213D93;
+    color: #fff;
+    height: 350px;
+}
+
+footer #contatos {
+    display: flex;
+    transform: scale(0.1);
+}
+
+#contatos img {
+    padding: 0 400px;
+}
+
+footer #copyright {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 0;
+}
