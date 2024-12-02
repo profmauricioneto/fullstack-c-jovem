@@ -18,17 +18,24 @@ footer #contatos {
     padding: 1em;
 }
 
+
 #contatos img {
-    margin: 0 1em;
+    margin: 0 1.5em;
 }
 
-footer hr {
+#linha-vertical {
+    height: 10em;
+    border: 1px solid #fff;
+}
+
+#copyright {
+    text-align: center;
+    padding: 1em 0;
+}
+
+#copyright hr {
     width: 100%;
     margin: 1em 0;
     border: 1px solid #fff;
 }
 
-footer #copyright {
-    text-align: center;
-    padding: 1em 0;
-}
