@@ -31,5 +31,27 @@ for(var i = 0; i < 10; i++) {
 }
 console.log("i = " + i);
 
+a += 1; // a = a + 1
+a *= 1; // a = a * 1
+// ...
+a++ // a = a + 1
+a-- // a = a - 1
 
+// if aninhado
+if (condicao1) {
+    // instrucao a
+    if (condicao2) {
+        // instrucao b
+    }
+} else {
+    // instrucao c
+}
 
+// if alinhado
+if (condicao1) {
+    // instrucao a
+}
+if (condicao2) {
+    // instrucao b
+}
+//...
