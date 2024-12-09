@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cardapio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#cardapio #item1 {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#item1 h3 {
+    color: #f00;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#item1 button {
+    background-color: #f00;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#carrinho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#carrinho h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#carrinho p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
