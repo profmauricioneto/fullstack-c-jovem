@@ -6,11 +6,13 @@ console.log(`Seu IMC é ${imc.toFixed(2)}`);
 
 let genero = prompt('Digite o seu gênero (M ou F):');
 let pesoIdeal = 0;
-switch (genero) {
-    case 'M':
+switch (genero.toLowerCase()) {
+    case 'masculino':
+    case 'm':
         pesoIdeal = 72.7 * altura - 58;
         break;
-    case 'F':
+    case 'feminino':
+    case 'f':
         pesoIdeal = 62.1 * altura - 44.7;
         break;
     default:
