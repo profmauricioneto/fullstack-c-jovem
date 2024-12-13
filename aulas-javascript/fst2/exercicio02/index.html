@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pedidos</title>
+    
+    <style>
+        .item-lista {
+            padding: 10px;
+            border: 1px solid #444;
+            color: #333;
+            border-radius: 5px;
+            text-transform: capitalize;
+        }
+
+        .remover {
+            margin: 0 10px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="item" placeholder="digite um pedido" />
+    <button onclick="adicionarPedido()">Adicionar</button>
+
+    <ul id="carrinho"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
