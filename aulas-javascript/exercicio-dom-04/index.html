@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Carrinho de Compras</title>
+</head>
+<body>
+  <h2>Produtos</h2>
+  <ul id="produtos">
+    <li>
+      Produto 1 - R$ 10,00
+      <button onclick="adicionarAoCarrinho(1, 'Produto 1', 10)">Adicionar</button>
+    </li>
+    </ul>
+
+  <h2>Carrinho de Compras</h2>
+  <table id="carrinho">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Preço Total</th>
+      </tr>
+    </thead>
+    <tbody id="carrinho-corpo"></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total:</td>
+        <td id="total">R$ 0,00</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
