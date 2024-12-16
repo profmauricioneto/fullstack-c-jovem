@@ -1,0 +1,32 @@
+.card-pokemon {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.car-image {
+    width: 100%;
+}
+
+#card-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-name, .card-description {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.card-type {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}

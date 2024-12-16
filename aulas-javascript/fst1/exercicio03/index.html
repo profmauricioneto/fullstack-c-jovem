@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+        body {
+            height: 100vh;
+        }
+        #carrossel {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+        #slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="carrossel">
+        <div id="slides">
+            <div class="slide"><img src="../../assets/wallpaper_01.jpg" alt="elemento1"></div>
+            <div class="slide"><img src="../../assets/wallpaper_02.jpg" alt="elemento2"></div>
+            <div class="slide"><img src="../../assets/wallpaper_03.jpg" alt="elemento3"></div>
+        </div>
+        <button onclick="moverSlide(-1)">&#9664</button>
+        <button onclick="moverSlide(1)">&#9654</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
