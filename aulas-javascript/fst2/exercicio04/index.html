@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercadinho</title>
+</head>
+<body>
+    <section>
+        <h3>Produtos</h3>
+        <ul>
+            <li>
+                Produto 1 - R$50,00
+                <button onclick="adicionarAoCarrinho(1, 'boneco', 50.00)">Adicionar</button>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Carrinho de Compras</h3>
+        <table id="carrinho">
+            <thead>
+                <tr>
+                    <th>Descricao</th>
+                    <th>Quantidade</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela"></tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
