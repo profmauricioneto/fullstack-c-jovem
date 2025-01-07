@@ -8,7 +8,7 @@ function adicionarProduto(id, nome, preco) {
     if (produtoExistente) {
         produtoExistente.quantidade++;
     } else {
-        carrinho.push({id, nome, preco, quantidade: 1})
+        carrinho.push({id: id, nome: nome, preco, quantidade: 1})
     }
 
     let tabelaCorpo = document.querySelector('#corpo-carrinho');
@@ -22,4 +22,6 @@ function adicionarProduto(id, nome, preco) {
         tabelaCorpo.appendChild(linha);
     });
 
+    // CALCULAR O TOTAL!
+    
 }
