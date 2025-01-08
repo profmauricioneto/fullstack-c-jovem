@@ -1,0 +1,17 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}

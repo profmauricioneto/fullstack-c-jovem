@@ -1,0 +1,27 @@
+.app {
+    text-align: center;      
+}
+
+.app nav {
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+li a {
+    list-style-type: none;
+    display: inline;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
