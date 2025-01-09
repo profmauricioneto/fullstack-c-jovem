@@ -35,6 +35,7 @@ let cities = [
   { city: "Paraíba", weather: "Too Hot!" },
   { city: "Alagoas", weather: "Too Hot!" },
   { city: "Sergipe", weather: "Too Hot!" },
+  { city: "Narnia", weather: "" },
 ];
 
 function getCitiesAPI(myCity) {
@@ -47,7 +48,7 @@ function searchWeatherForecast(city) {
     setTimeout(() => {
       const forecastWeather = getCitiesAPI(city);
       if (forecastWeather) {
-        resolve(`Weathe forecast in ${city} is ${forecastWeather}`);
+        resolve(`Weather forecast in ${city} is ${forecastWeather}`);
       } else {
         reject(`It was not possible to get the weather forecast for ${city}`);
       }
@@ -81,3 +82,12 @@ Promise.all([forecastCeara])
   .catch((err) => {
     console.error("An error occurs", err);
   });
+
+  const forecastNarnia = searchWeatherForecast("Narnia");
+  Promise.all([forecastNarnia])
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err) => {
+      console.error("An error occurs", err);
+    });

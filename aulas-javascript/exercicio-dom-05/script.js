@@ -1,6 +1,6 @@
+let tarefas = [];
 const form = document.getElementById('form-tarefa');
 const listaTarefas = document.getElementById('lista-tarefas');
-let tarefas = [];
 
 form.addEventListener('submit', (event) => {
   // garante que o formulário não atualize
@@ -8,10 +8,12 @@ form.addEventListener('submit', (event) => {
   
   // captura os elmentos do formulário
   const nomeTarefa = document.getElementById('nome-tarefa').value;
-  const prioridade = document.getElementById('prioridade').value;
+  const prioridade = document.getElementById('prioridade-valor').value;
   
   // cria um objeto de nova tarefa com os elementos do formulário e adiciona no array
-  const novaTarefa = { nome: nomeTarefa, prioridade };
+  const novaTarefa = { nome: nomeTarefa, prioridade: prioridade};
+  console.log(novaTarefa);
+
   tarefas.push(novaTarefa);
 
   // Ordenar as tarefas por prioridade (alta, média, baixa)
@@ -22,7 +24,7 @@ form.addEventListener('submit', (event) => {
 
   // Renderizar a lista de tarefas adicionando li com os elementos
   listaTarefas.innerHTML = '';
-  tarefas.forEach(tarefa => {
+  tarefas.forEach((tarefa) => {
     const li = document.createElement('li');
     li.textContent = `${tarefa.nome} (${tarefa.prioridade})`;
     listaTarefas.appendChild(li);
