@@ -4,7 +4,7 @@ let cities = [
   { city: "Sao Paulo", weather: "Raining" },
   { city: "Rio de Janeiro", weather: "Sunny" },
   { city: "Ceará", weather: "Too Hot!" },
-  { city: "Bahia", weacitiesher: "Sunny" },
+  { city: "Bahia", weather: "Sunny" },
   { city: "Minas Gerais", weather: "Cold" },
   { city: "Paraná", weather: "Cloudy" },
   { city: "Santa Catarina", weather: "Snowing" },
