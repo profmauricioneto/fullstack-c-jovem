@@ -1,0 +1,26 @@
+.card-pokemon {
+    border: 1px solid #666;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-pokemon:hover {
+    transform: scale(1.05);
+}
+
+.image-pokemon {
+    width: 200px;
+    height: 300px;
+}
+
+.name-pokemon {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.name-pokemon p {
+    font-size: 1rem;
+    color: #444;
+}
