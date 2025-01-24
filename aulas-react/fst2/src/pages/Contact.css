@@ -1,0 +1,11 @@
+.contact {
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+}
+
+ul li {
+    list-style: none;
+    text-decoration: none;
+}

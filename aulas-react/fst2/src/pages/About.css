@@ -1,0 +1,15 @@
+.about {
+    align-items: center;
+    text-align: center;
+    color: #333;
+    display: flex;
+}
+
+.image-about {
+    width: 400px;
+    height: 400px;
+}
+
+.about h2 {
+    font-size: 2rem;
+}

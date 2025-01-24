@@ -1,0 +1,19 @@
+.nav-bar {
+    text-align: center;
+}
+
+.nav-bar nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 10px;
+    padding: 10px;
+    color: #333;
+}
+
+ul li {
+    display: inline;
+    list-style: none;
+    margin: 0 10px;
+    text-decoration: none;
+}
