@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-
-
 const Counter = () => {
 
     let [counter, setCounter] = useState(0);
