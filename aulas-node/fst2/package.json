@@ -1,5 +1,5 @@
 {
-  "name": "aulas-node",
+  "name": "fst2",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,8 +11,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "bootstrap": "^5.3.3",
     "express": "^4.21.2"
   },
   "devDependencies": {
