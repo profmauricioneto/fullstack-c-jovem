@@ -1,9 +1,9 @@
 {
-  "name": "aulas-node",
+  "name": "exercicio03",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,12 +11,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "bootstrap": "^5.3.3",
     "express": "^4.21.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9",
-    "prisma": "^6.3.1"
+    "nodemon": "^3.1.9"
   }
 }

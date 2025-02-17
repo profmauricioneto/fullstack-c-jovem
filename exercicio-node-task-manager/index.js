@@ -1,12 +1,11 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const taskRoutes = require('./routes/taskRoutes');
-
+// const taskRoutes = require('./routes/taskRoutes');
+const taskRoutesBD = require('./routes/taskRoutesBD');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-app.use('/tasks', taskRoutes);
+app.use(express.json());
+app.use('/tasks', taskRoutesBD);
 
 app.listen(PORT, () => {
     console.log(`Servidor executando em: http://localhost:${PORT}`);
