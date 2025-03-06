@@ -19,9 +19,9 @@ const TaskList = () => {
         }
     };
 
-    const adicionarTask = async() => {
+    const adicionarTask = async(newTask) => {
         try {
-            const response = await axios.post('http://localhost:3000/tasks');
+            const response = await axios.post('http://localhost:3000/tasks', newTask);
             setTasks([...tasks, response.data]);
         } catch (error) {
             console.error('Erro ao enviar os dados para o backend', error);

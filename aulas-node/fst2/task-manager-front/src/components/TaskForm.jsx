@@ -7,7 +7,7 @@ const TaskForm = ({ addTask }) => {
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        addTask({title, description, status});
+        addTask({ title, description, status });
         setTitle('');
         setDescription('');
         setStatus('PENDING');
@@ -19,7 +19,7 @@ const TaskForm = ({ addTask }) => {
                 type="text" 
                 placeholder='Título da Tarefa'
                 value={title}
-                onChange={e => setTitle(e.target.value)}
+                onChange={(e) => setTitle(e.target.value)}
                 required
                 />
             
@@ -27,10 +27,10 @@ const TaskForm = ({ addTask }) => {
                 type="text" 
                 placeholder='Descrição da tarefa'
                 value={description}
-                onChange={e => setDescription(e.target.value)}
+                onChange={(e) => setDescription(e.target.value)}
                 required
                 />
-            <select value={status} onChange={e => setStatus(e.target.value)}>
+            <select value={status} onChange={(e) => setStatus(e.target.value)}>
                 <option value="PENDING">Pendente</option>
                 <option value="INPROGRESS">Em Andamento</option>
                 <option value="COMPLETED">Concluído</option>

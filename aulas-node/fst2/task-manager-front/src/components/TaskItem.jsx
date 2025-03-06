@@ -19,14 +19,14 @@ const TaskItem = ({task, updateTask, deleteTask}) => {
                         <input 
                             type="text"
                             value={title}
-                            onChange={e => setTitle(e.target.value)} 
+                            onChange={(e) => setTitle(e.target.value)} 
                         />
                         <input 
                             type="text"
                             value={description}
-                            onChange={e => setDescription(e.target.value)} 
+                            onChange={(e) => setDescription(e.target.value)} 
                         />
-                        <select value={status} onChange={e => setStatus(e.target.value)}>
+                        <select value={status} onChange={(e) => setStatus(e.target.value)}>
                             <option value="PENDING">Pendente</option>
                             <option value="INPROGRESS">Em Andamento</option>
                             <option value="COMPLETED">Concluído</option>
@@ -39,7 +39,7 @@ const TaskItem = ({task, updateTask, deleteTask}) => {
                         <p>{task.description}</p>
                         <p>{task.status}</p>
                         <button onClick={() => setEditing(true)}>Edição</button>
-                        <button onClick={() => deleteTask(true)}>Excluir</button>
+                        <button onClick={() => deleteTask(task.id)}>Excluir</button>
                     </div>
                 )}
         </li>

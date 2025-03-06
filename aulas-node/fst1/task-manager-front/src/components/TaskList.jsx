@@ -19,9 +19,9 @@ const TaskList = () => {
         }
     };
 
-    const adicionarTask = async() => {
+    const adicionarTask = async(newTask) => {
         try {
-            const response = await axios.post('http://localhost:3001/tasks');
+            const response = await axios.post('http://localhost:3001/tasks', newTask);
             setTasks([...tasks, response.data]);
             console.log(response.data);
         } catch (error) {
@@ -40,8 +40,8 @@ const TaskList = () => {
 
     const atualizarTask = async(id, updateTask) => {
         try {
-            const reponse = await axios.put(`http://localhost:3001/tasks/${id}`, updateTask);
-            setTasks(tasks.map(task => (task.id === id ? reponse.data : task)))
+            const response = await axios.put(`http://localhost:3001/tasks/${id}`, updateTask);
+            setTasks(tasks.map(task => (task.id === id ? response.data : task)))
         } catch (error) {
           console.error('Erro ao atualizar a task', error);
             
