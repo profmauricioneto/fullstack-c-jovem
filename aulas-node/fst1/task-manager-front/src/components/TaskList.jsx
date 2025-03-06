@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 import TaskItem from './TaskItem';
 import TaskForm from './TaskForm';
+import HeaderComponent from './HeaderComponent';
+import FooterComponent from './FooterComponent';
+
+const List = styled.ul`
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+`;
 
 const TaskList = () => {
     const [tasks, setTasks] = useState([]);
@@ -23,7 +32,6 @@ const TaskList = () => {
         try {
             const response = await axios.post('http://localhost:3001/tasks', newTask);
             setTasks([...tasks, response.data]);
-            console.log(response.data);
         } catch (error) {
             console.error('Erro ao adicionar a task', error);
         }
@@ -50,14 +58,15 @@ const TaskList = () => {
 
     return (
         <div>
-            <h1>Gerenciador de Tarefas</h1>
+            <HeaderComponent />
             <TaskForm addTask={adicionarTask}/>
-            <ul>
+            <List>
                 {
                 tasks.map((task) => (
                     <TaskItem key={task.id} task={task} deleteTask={apagarTask} updateTask={atualizarTask} />
                 ))}
-            </ul>
+            </List>
+            <FooterComponent />
         </div>
     );
 
