@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 import TaskForm from './TaskForm';
 import TaskItem from './TaskItem';
+import HeaderComponent from './HeaderComponent';
+import FooterComponent from './FooterComponent';
+
+const UnsortList = styled.ul`
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+`;
 
 const TaskList = () => {
     const [tasks, setTasks] = useState([]);
@@ -48,13 +57,14 @@ const TaskList = () => {
 
     return(
         <React.Fragment>
-            <h2>Gerenciamento de Tarefas</h2>
+            <HeaderComponent />
             <TaskForm addTask={adicionarTask}/>
-            <ul>
+            <UnsortList>
                 {tasks.map((task) => (
                     <TaskItem key={task.id} task={task} updateTask={atualizarTask} deleteTask={apagarTask}/>
                 ))}
-            </ul>
+            </UnsortList>
+            <FooterComponent />
         </React.Fragment>
     );
 };
