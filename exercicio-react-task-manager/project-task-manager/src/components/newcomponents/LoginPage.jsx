@@ -34,36 +34,23 @@ const Button = styled.button`
   }
 `;
 
-const UserForm = ({ onUserCreated }) => {
-  const [name, setName] = useState('');
+const LoginPage = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/users', { name, email, password });
-      onUserCreated(response.data);
-      setName('');
-      setEmail('');
-      setPassword('');
+      const response = await axios.post('http://localhost:3000/users/login', { email, password });
+      onLogin(response.data);
     } catch (error) {
-      console.error('Error creating user:', error);
+      console.error('Error logging in:', error);
+      alert('Erro ao fazer login. Verifique suas credenciais e tente novamente.');
     }
   };
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Label htmlFor="name">
-        Nome:
-        <Input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-      </Label>
       <Label htmlFor="email">
         Email:
         <Input
@@ -84,9 +71,9 @@ const UserForm = ({ onUserCreated }) => {
           required
         />
       </Label>
-      <Button type="submit">Cadastrar</Button>
+      <Button type="submit">Login</Button>
     </Form>
   );
 };
 
-export default UserForm;
+export default LoginPage;

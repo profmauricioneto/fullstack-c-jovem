@@ -1,9 +1,9 @@
 const userModel = require("../models/userBD");
 
 exports.createUser = async (req, res) => {
-    const { name, email } = req.body;
+    const { name, email, password } = req.body;
     try {
-        const user = await userModel.createUser(name, email);
+        const user = await userModel.createUser(name, email, password);
         res.status(201).json(user);
     } catch (error) {
         res.status(500).json({ error: 'Failed to create user' });
@@ -34,9 +34,9 @@ exports.getUserById = async (req, res) => {
 };
 
 exports.updateUser = async (req, res) => {
-    const { name, email } = req.body;
+    const { name, email, password } = req.body;
     try {
-        const user = await userModel.updateUser(Number(req.params.id), { name, email });
+        const user = await userModel.updateUser(Number(req.params.id), { name, email, password });
         res.json(user);
     } catch (error) {
         res.status(500).json({ error: 'Failed to update user' });
@@ -52,5 +52,58 @@ exports.deleteUser = async (req, res) => {
     }
 };
 
+// Funções para tarefas
+exports.createTask = async (req, res) => {
+    const { title, description, status } = req.body;
+    const { userId } = req.params;
+    try {
+        const task = await userModel.createTask(userId, title, description, status);
+        res.status(201).json(task);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to create task' });
+    }
+};
 
+exports.updateTask = async (req, res) => {
+    const { title, description, status } = req.body;
+    const { userId, id } = req.params;
+    try {
+        const task = await userModel.updateTask(Number(id), { title, description, status, userId: Number(userId) });
+        res.json(task);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to update task' });
+    }
+};
 
+exports.deleteTask = async (req, res) => {
+    try {
+        const task = await userModel.deleteTask(Number(req.params.id));
+        res.json(task);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to delete task' });
+    }
+};
+
+exports.loginUser = async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const user = await userModel.getUserByEmailAndPassword(email, password);
+        if (user) {
+            res.json(user);
+        } else {
+            res.status(401).json({ error: 'Invalid email or password' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to login' });
+    }
+};
+
+exports.getTasksByUserId = async (req, res) => {
+    const { userId } = req.params;
+    try {
+        const tasks = await userModel.getTasksByUserId(userId);
+        res.json(tasks);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to fetch tasks' });
+    }
+};

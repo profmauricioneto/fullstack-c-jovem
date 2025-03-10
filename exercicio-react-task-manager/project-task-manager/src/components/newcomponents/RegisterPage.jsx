@@ -34,7 +34,7 @@ const Button = styled.button`
   }
 `;
 
-const UserForm = ({ onUserCreated }) => {
+const RegisterPage = ({ onRegister }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -43,12 +43,9 @@ const UserForm = ({ onUserCreated }) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:3000/users', { name, email, password });
-      onUserCreated(response.data);
-      setName('');
-      setEmail('');
-      setPassword('');
+      onRegister(response.data);
     } catch (error) {
-      console.error('Error creating user:', error);
+      console.error('Error registering user:', error);
     }
   };
 
@@ -84,9 +81,9 @@ const UserForm = ({ onUserCreated }) => {
           required
         />
       </Label>
-      <Button type="submit">Cadastrar</Button>
+      <Button type="submit">Registrar</Button>
     </Form>
   );
 };
 
-export default UserForm;
+export default RegisterPage;
