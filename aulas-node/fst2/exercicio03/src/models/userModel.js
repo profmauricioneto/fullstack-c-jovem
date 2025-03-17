@@ -51,6 +51,15 @@ async function deleteUser(id) {
     return user;
 };
 
+// async function verifyLogin(email, password) {
+//     const user = await prisma.user.findUnique({
+//         email: {email: email},
+//         password: {password: password},
+//         include: { tasks: true },
+//     });
+//     return 
+// }
+
 // FUNÇÕES PARA MANIPULAÇÃO DAS TASK
 
 module.exports = {
