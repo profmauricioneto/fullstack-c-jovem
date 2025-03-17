@@ -51,6 +51,60 @@ async function deleteUser(id) {
     return user;
 };
 
+// buscar pelo login do usuário
+async function getUserByEmailAndPassword(email, password) {
+    const user = await prisma.user.findFirst({
+        where: {
+            email: email,
+            password: password,
+        },
+        include: { tasks: true },
+    });
+    return user;
+};
+
+// retornar todas as tasks do usuário
+async function getTasksByUserId(userId) {
+    const tasks = await prisma.tasks.findMany({
+        where: {userId: parseInt(userId)},
+        include: { user: true },
+    });
+    return tasks;
+};
+
+// cria uma task de um usuário específico
+async function createTask(userId, title, description, status) {
+    const task = await prisma.tasks.create({
+        data: {
+            title,
+            description,
+            status,
+            userId: parseInt(userId),
+        },
+        include: { user: true },
+    });
+    return task;
+};
+
+// atualiza os dados de um task específica
+async function updateTask(id, data) {
+    const task = await prisma.tasks.update({
+        where: {id: parseInt(id)},
+        data,
+        include: { user: true },
+    });
+    return task;
+};
+
+// deleta uma task específica
+async function deleteTask(id) {
+    const task = await prisma.tasks.delete({
+        where: {id: parseInt(id)},
+        include: { user: true },
+    });
+    return task;
+};
+
 // FUNÇÕES DE CRUD DA TAREFA
 module.exports = {
     createUser,
@@ -58,4 +112,9 @@ module.exports = {
     getUserById,
     updateUser,
     deleteUser,
+    getUserByEmailAndPassword,
+    getTasksByUserId,
+    createTask,
+    updateTask,
+    deleteTask,
 };
