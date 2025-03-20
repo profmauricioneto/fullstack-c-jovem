@@ -65,8 +65,8 @@ async function getUserByEmailAndPassword(email, password) {
 
 // retornar todas as tasks do usuário
 async function getTasksByUserId(userId) {
-    const tasks = await prisma.tasks.findMany({
-        where: {userId: parseInt(userId)},
+    const tasks = await prisma.task.findMany({
+        where: { userId: parseInt(userId) },
         include: { user: true },
     });
     return tasks;
@@ -74,7 +74,7 @@ async function getTasksByUserId(userId) {
 
 // cria uma task de um usuário específico
 async function createTask(userId, title, description, status) {
-    const task = await prisma.tasks.create({
+    const task = await prisma.task.create({
         data: {
             title,
             description,
@@ -88,7 +88,7 @@ async function createTask(userId, title, description, status) {
 
 // atualiza os dados de um task específica
 async function updateTask(id, data) {
-    const task = await prisma.tasks.update({
+    const task = await prisma.task.update({
         where: {id: parseInt(id)},
         data,
         include: { user: true },
@@ -98,7 +98,7 @@ async function updateTask(id, data) {
 
 // deleta uma task específica
 async function deleteTask(id) {
-    const task = await prisma.tasks.delete({
+    const task = await prisma.task.delete({
         where: {id: parseInt(id)},
         include: { user: true },
     });

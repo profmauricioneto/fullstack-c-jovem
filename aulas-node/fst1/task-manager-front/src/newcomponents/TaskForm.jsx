@@ -45,7 +45,7 @@ const TaskForm = ({ userId, onTaskCreated }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        const response = await axios.post(`http://localhost:3001/user/${userId}/tasks`);
+        const response = await axios.post(`http://localhost:3001/user/${userId}/tasks`, {title, description, status});
         onTaskCreated(response.data);
         setTitle('');
         setDescription('');
