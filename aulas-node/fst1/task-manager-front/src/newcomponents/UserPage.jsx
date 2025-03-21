@@ -49,7 +49,7 @@ const UserPage = ({ user, onLogout }) => {
         loadTasks();
     }, [user.id]);
 
-    const handleCreateTask = (newTask) => {
+    const handleCreateTask = async (newTask) => {
         setTasks((previousTasks)  => [...previousTasks, newTask]);
     };
 

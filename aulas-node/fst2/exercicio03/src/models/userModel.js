@@ -51,16 +51,55 @@ async function deleteUser(id) {
     return user;
 };
 
-// async function verifyLogin(email, password) {
-//     const user = await prisma.user.findUnique({
-//         email: {email: email},
-//         password: {password: password},
-//         include: { tasks: true },
-//     });
-//     return 
-// }
+async function getUserByEmailAndPassword(email, password) {
+    const user = prisma.user.findFirst({
+        where: {
+            email: email,
+            password: password,
+        },
+        include: { tasks: true },
+    });
+    return user;
+}
 
 // FUNÇÕES PARA MANIPULAÇÃO DAS TASK
+async function createTask(userId, title, description, status) {
+    const task = await prisma.task.create({
+        data: {
+            title,
+            description,
+            status,
+            userId: parseInt(userId),
+        },
+        include: { user: true },
+    });
+    return task;
+};
+
+async function updateTask(id, data) {
+    const task = await prisma.task.update({
+        where: { id: parseInt(id) },
+        data,
+        include: { user: true },
+    });
+    return task;
+};
+
+async function deleteTask(id) {
+    const task = await prisma.task.delete({
+        where: {id: parseInt(id)},
+        include: { user: true },
+    });
+    return task;
+};
+
+async function getTasksByUserId(userId) {
+    const tasks = await prisma.task.findMany({
+        where: { userId: parseInt(userId) },
+        include: { user: true },
+    });
+    return tasks;
+}
 
 module.exports = {
     createUser,
@@ -68,4 +107,9 @@ module.exports = {
     getUserById,
     updateUser,
     deleteUser,
+    getUserByEmailAndPassword,
+    createTask, 
+    updateTask,
+    deleteTask,
+    getTasksByUserId,
 }

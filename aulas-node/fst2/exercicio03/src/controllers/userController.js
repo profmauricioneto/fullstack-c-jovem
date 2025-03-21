@@ -50,4 +50,65 @@ exports.deleteUserController = async (req, res) => {
     }
 };
 
+exports.getLoginController = async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const user = await userModel.getUserByEmailAndPassword(email, password);
+        if(user) {
+            res.json(user);
+        } else {
+            res.status(401).json({error: 'Invalid email or password'});
+        }
+    } catch (error) {
+        res.status(500).json({error: 'Failed to login.'});
+        console.log(error);
+    }
+}
+
+
 // FUNÇÕES PARA MANIPULAÇÃO DAS TASKS
+exports.getTasksByUserIdController = async (req, res) => {
+    const { userId } = req.params;
+    try {
+        const tasks = await userModel.getTasksByUserId(Number(userId));
+        res.json(tasks);
+    } catch (error) {
+        res.status(500).json({error: 'Failed to fetch tasks.'});
+        console.log(error);
+    }
+};
+
+exports.createTaskController = async (req, res) => {
+    const {title, description, status} = req.body;
+    const {userId} = req.params;
+    try {
+        const task = await userModel.createTask(Number(userId), title, description, status);
+        res.json(task);
+    } catch (error) {
+        res.status(500).json({error: 'Failed to create tasks.'});
+        console.log(error);
+    }
+};
+
+exports.updateTaskController = async (req, res) => {
+    const {title, description, status} = req.body;
+    const {userId, id} = req.params;
+    try {
+        const task = await userModel.updateTask(Number(id), {title, description, status, userId: Number(userId)});
+        res.json(task);
+    } catch (error) {
+        res.status(500).json({error: 'Failed to update task.'});
+        console.log(error);
+    }
+};
+
+exports.deleteTaskController = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const task = await userModel.deleteTask(Number(id));
+        res.json(task);
+    } catch (error) {
+        res.status(500).json({error: 'Failed to delete task.'});
+        console.log(error);
+    }
+};

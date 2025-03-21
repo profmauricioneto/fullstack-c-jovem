@@ -8,6 +8,12 @@ router.post('/', userController.createUserController);
 router.delete('/:id', userController.deleteUserController);
 router.put('/:id', userController.updateUserController);
 
-// router.post('/login', userController.);
+router.post('/login', userController.getLoginController);
+
+// rotas das tarefas
+router.get('/:userId/tasks', userController.getTasksByUserIdController);
+router.post('/:userId/tasks', userController.createTaskController);
+router.put('/:userId/tasks/:id', userController.updateTaskController);
+router.delete('/:userId/tasks/:id', userController.deleteTaskController);
 
 module.exports = router;

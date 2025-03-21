@@ -78,10 +78,6 @@ const LoginPage = ({ onLogin }) => {
         }
     }
 
-    // const handleToRegister = () => {
-    //     navigate('/login');
-    // }
-
     return(
         <Centralization>
         <Form onSubmit={handleSubmit}>
