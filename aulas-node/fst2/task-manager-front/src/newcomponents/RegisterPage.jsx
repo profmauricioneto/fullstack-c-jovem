@@ -62,6 +62,8 @@ const RegisterPage = ({ onRegister }) => {
         event.preventDefault();
         try {
             const response = await axios.post('http://localhost:3000/user', { name, email, password });
+            const token = response.data.token;
+            localStorage.setItem('token', token);
             onRegister(response.data);
         } catch (error) {
             console.error('Error registering user: ', error);

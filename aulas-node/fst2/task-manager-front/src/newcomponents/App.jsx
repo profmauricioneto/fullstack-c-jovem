@@ -9,39 +9,51 @@ const App = () => {
 
     useEffect(() => {
         const storedUser = localStorage.getItem('user');
-        if (storedUser) {
-            setUser(JSON.parse(storedUser));
+        const token = localStorage.getItem('token');
+        if (storedUser && token) {
+            try {
+                setUser(JSON.parse(storedUser));
+            } catch (error) {
+                console.error('Erro ao analisar o JSON do usuário:', error);
+                localStorage.removeItem('user');
+                localStorage.removeItem('token');
+            }
+        } else {
+            localStorage.removeItem('user');
+            localStorage.removeItem('token');
         }
     }, [])
 
     const handleLogin = (logginUser) => {
-        setUser(logginUser);
-        localStorage.setItem('user', JSON.stringify(logginUser));
+        setUser(logginUser.user);
+        localStorage.setItem('user', JSON.stringify(logginUser.user));
+        localStorage.setItem('token', logginUser.token);
     };
 
     const handleRegister = (registerUser) => {
-        setUser(registerUser);
-        localStorage.setItem('user', JSON.stringify(registerUser));
+        setUser(registerUser.user);
+        localStorage.setItem('user', JSON.stringify(registerUser.user));
+        localStorage.setItem('token', registerUser.token);
     };
 
     const handleLogout = () => {
         setUser(null);
         localStorage.removeItem('user');
+        localStorage.removeItem('token');
     }
 
     return (
         <div>
             {user ? (
                 <UserPage user={user} onLogout={handleLogout} />
-            ) : isRegister ?
-            (
+            ) : isRegister ? (
                 <RegisterPage onRegister={handleRegister} />
             ) : (
-                <LoginPage onLogin={handleLogin} />
+                <LoginPage onLogin={handleLogin} onToggleRegister={() => setIsRegister(true)} />
             )}
             {!user && (
                 <button onClick={() => setIsRegister(!isRegister)}>
-                    {isRegister ? 'Do you have an account? Login it' : 'Doenst have an account? Register yourself!'}
+                    {isRegister ? 'Do you have an account? Login it' : 'Don\'t have an account? Register yourself!'}
                 </button>
             )}
         </div>

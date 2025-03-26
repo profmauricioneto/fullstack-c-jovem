@@ -35,14 +35,17 @@ const UserPage = ({user, onLogout}) => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
-        const fetchTasks = async() => {
+        const fetchTasks = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/user/${user.id}/tasks`);
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`http://localhost:3000/user/${user.id}/tasks`, {
+                    headers: { Authorization: `Bearer ${token}` }
+                });
                 setTasks(response.data);
             } catch (error) {
-                console.error('Error to fetching data from user', error);
+                console.error('Error fetching data from user', error);
             }
-        }
+        };
         fetchTasks();
     }, [user.id]);
 

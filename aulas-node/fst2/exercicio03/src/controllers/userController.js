@@ -1,4 +1,5 @@
 const userModel = require('../models/userModel');
+const jwt = require('jsonwebtoken');
 
 exports.createUserController = async (req, res) => {
     const {name, email, password} = req.body;
@@ -54,16 +55,17 @@ exports.getLoginController = async (req, res) => {
     const { email, password } = req.body;
     try {
         const user = await userModel.getUserByEmailAndPassword(email, password);
-        if(user) {
-            res.json(user);
+        if (user) {
+            const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
+            res.json({ user, token });
         } else {
-            res.status(401).json({error: 'Invalid email or password'});
+            res.status(401).json({ error: 'Invalid email or password' });
         }
     } catch (error) {
-        res.status(500).json({error: 'Failed to login.'});
+        res.status(500).json({ error: 'Failed to login.' });
         console.log(error);
     }
-}
+};
 
 
 // FUNÇÕES PARA MANIPULAÇÃO DAS TASKS

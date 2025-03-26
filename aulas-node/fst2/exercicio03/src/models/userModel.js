@@ -1,14 +1,16 @@
 require('dotenv').config();
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
+const bcrypt = require('bcrypt');
 
 // função para criar um usuário
 async function createUser(name, email, password) {
-    const user = await prisma.user.create( {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await prisma.user.create({
         data: {
             name,
             email,
-            password,
+            password: hashedPassword,
         },
         include: { tasks: true },
     });
@@ -52,14 +54,14 @@ async function deleteUser(id) {
 };
 
 async function getUserByEmailAndPassword(email, password) {
-    const user = prisma.user.findFirst({
-        where: {
-            email: email,
-            password: password,
-        },
+    const user = await prisma.user.findFirst({
+        where: { email },
         include: { tasks: true },
     });
-    return user;
+    if (user && await bcrypt.compare(password, user.password)) {
+        return user;
+    }
+    return null;
 }
 
 // FUNÇÕES PARA MANIPULAÇÃO DAS TASK

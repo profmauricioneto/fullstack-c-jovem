@@ -62,19 +62,20 @@ const MessageBtn = styled.button`
 `;
 
 
-const LoginPage = ({ onLogin }) => {
+const LoginPage = ({ onLogin, onToggleRegister }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    // const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
             const response = await axios.post('http://localhost:3000/user/login', { email, password });
+            const token = response.data.token;
+            localStorage.setItem('token', token);
             onLogin(response.data);
         } catch (error) {
-            console.error('Error to login: ', error);
+            console.error('Error logging in: ', error);
         }
     }
 
@@ -104,9 +105,11 @@ const LoginPage = ({ onLogin }) => {
                     required
                     />
             </Label>
-            <Button type='submit'>Register</Button>
+            <Button type='submit'>Login</Button>
 
-            <MessageBtn >if you doesn't has a register, click here.</MessageBtn>
+            <MessageBtn onClick={onToggleRegister}>
+                If you don't have an account, click here to register.
+            </MessageBtn>
         </Form>
         </Centralization>
     );
